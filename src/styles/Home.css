@@ -1,0 +1,247 @@
+.home-page {
+  position: relative;
+  min-height: 100vh;
+  overflow: hidden;
+  background: radial-gradient(circle at top, #182745 0%, #090f1f 52%, #04070f 100%);
+}
+
+.particle-canvas {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  pointer-events: none;
+}
+
+.home-shell {
+  position: relative;
+  z-index: 1;
+  width: min(980px, 92vw);
+  margin: 0 auto;
+  padding: 2.5rem 0 3rem;
+  color: #eaf0ff;
+}
+
+.home-header {
+  margin-bottom: 1.6rem;
+  text-align: center;
+}
+
+.home-kicker {
+  margin: 0;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: #7bc5ff;
+  font-size: 0.74rem;
+}
+
+.home-header h1 {
+  margin: 0.2rem 0 0.5rem;
+  font-size: clamp(2rem, 6vw, 3.2rem);
+}
+
+.home-subtitle {
+  margin: 0;
+  color: #bbcaef;
+}
+
+.panel {
+  margin-bottom: 1rem;
+  border-radius: 16px;
+  border: 1px solid rgba(125, 168, 255, 0.24);
+  background: rgba(10, 18, 34, 0.58);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 22px 50px rgba(0, 0, 0, 0.45);
+  padding: 1.1rem;
+}
+
+.panel-top {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-bottom: 0.9rem;
+}
+
+.job-form,
+.filters {
+  display: grid;
+  gap: 0.9rem;
+  align-items: end;
+}
+
+.job-form {
+  grid-template-columns: 1fr 1fr 0.8fr auto;
+}
+
+.filters {
+  grid-template-columns: 1.2fr 0.8fr 0.8fr;
+  margin-bottom: 0.95rem;
+}
+
+.job-form label,
+.filters label,
+.job-edit label {
+  display: grid;
+  gap: 0.3rem;
+  text-align: left;
+}
+
+.job-form span,
+.filters span,
+.job-edit span {
+  font-size: 0.82rem;
+  color: #b8c5e8;
+}
+
+.job-form input,
+.job-form select,
+.filters input,
+.filters select,
+.job-edit input,
+.job-edit select {
+  border: 1px solid rgba(166, 194, 255, 0.28);
+  border-radius: 10px;
+  background: rgba(7, 13, 26, 0.75);
+  color: #e4edff;
+  padding: 0.62rem 0.72rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.job-form input:focus,
+.job-form select:focus,
+.filters input:focus,
+.filters select:focus,
+.job-edit input:focus,
+.job-edit select:focus {
+  border-color: #71bcff;
+  box-shadow: 0 0 0 3px rgba(113, 188, 255, 0.22);
+}
+
+button {
+  border: 0;
+  border-radius: 10px;
+  padding: 0.65rem 0.95rem;
+  cursor: pointer;
+  color: #081327;
+  font-weight: 600;
+  background: linear-gradient(135deg, #7fc8ff, #72ffc6);
+  transition: transform 0.2s ease, filter 0.2s ease;
+}
+
+button:hover {
+  transform: translateY(-1px);
+  filter: brightness(1.05);
+}
+
+.btn-secondary {
+  color: #d0dbf8;
+  border: 1px solid rgba(160, 190, 255, 0.36);
+  background: rgba(22, 33, 58, 0.8);
+}
+
+.btn-danger {
+  color: #ffdee6;
+  border: 1px solid rgba(255, 159, 189, 0.35);
+  background: rgba(94, 24, 44, 0.75);
+}
+
+.panel-list h2 {
+  margin: 0;
+  font-size: 1.1rem;
+  color: #dce7ff;
+}
+
+.jobs-grid {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.job-card {
+  border: 1px solid rgba(165, 191, 255, 0.2);
+  border-radius: 12px;
+  padding: 0.85rem;
+  text-align: left;
+  background: rgba(7, 13, 26, 0.72);
+}
+
+.job-card h3 {
+  margin: 0 0 0.45rem;
+  color: #e9f0ff;
+  font-size: 1.05rem;
+}
+
+.job-card h3 span {
+  color: #a9bbdf;
+  font-weight: 500;
+}
+
+.job-card p {
+  margin: 0.2rem 0;
+  color: #cad8f6;
+}
+
+.job-edit {
+  display: grid;
+  gap: 0.6rem;
+}
+
+.job-status {
+  display: inline-block;
+  border-radius: 999px;
+  padding: 0.24rem 0.62rem;
+  border: 1px solid transparent;
+  font-size: 0.82rem;
+}
+
+.status-applied {
+  color: #8dd5ff;
+  border-color: rgba(141, 213, 255, 0.4);
+  background: rgba(141, 213, 255, 0.12);
+}
+
+.status-interview {
+  color: #ffe08f;
+  border-color: rgba(255, 224, 143, 0.4);
+  background: rgba(255, 224, 143, 0.12);
+}
+
+.status-rejected {
+  color: #ffa7a7;
+  border-color: rgba(255, 167, 167, 0.4);
+  background: rgba(255, 167, 167, 0.12);
+}
+
+.status-offer {
+  color: #9af5bf;
+  border-color: rgba(154, 245, 191, 0.4);
+  background: rgba(154, 245, 191, 0.12);
+}
+
+.job-actions {
+  margin-top: 0.55rem;
+  display: flex;
+  gap: 0.45rem;
+  flex-wrap: wrap;
+}
+
+.job-actions button {
+  padding: 0.4rem 0.72rem;
+  font-size: 0.82rem;
+}
+
+.empty-state {
+  margin: 0;
+  color: #b8c7e8;
+}
+
+@media (max-width: 840px) {
+  .job-form,
+  .filters {
+    grid-template-columns: 1fr;
+  }
+
+  .job-form button,
+  .filters button {
+    width: 100%;
+  }
+}
